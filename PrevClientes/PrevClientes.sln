@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrevClientes", "PrevClientes\PrevClientes.csproj", "{1AD9411D-EC72-4599-8FAA-6F7406360AEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrevClientes", "PrevClientes\PrevClientes.csproj", "{1AD9411D-EC72-4599-8FAA-6F7406360AEB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.0 - Presentation", "1.0 - Presentation", "{191F7DEB-48E8-46EB-A66C-00BAA04824CB}"
 EndProject
@@ -15,25 +15,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.0 - Infrastruture", "4.0 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{5F052249-BD05-454B-A720-81650DF93E8E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{C6668CAC-2961-4F9E-9726-4A27CEE0E05B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrevClientes.Application", "PrevClientes.Application\PrevClientes.Application.csproj", "{9D00C490-407B-4157-940A-9A3899DAA47A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrevClientes.Application", "PrevClientes.Application\PrevClientes.Application.csproj", "{9D00C490-407B-4157-940A-9A3899DAA47A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrevClientes.Application.DTO", "PrevClientes.Application.DTO\PrevClientes.Application.DTO.csproj", "{8241B4F8-7C30-4AA2-9935-13F8BBEC12C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrevClientes.Application.DTO", "PrevClientes.Application.DTO\PrevClientes.Application.DTO.csproj", "{8241B4F8-7C30-4AA2-9935-13F8BBEC12C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrevClientes.Domain", "PrevClientes.Domain\PrevClientes.Domain.csproj", "{E8CF6A1C-97BF-43DF-8838-CC30C8298089}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrevClientes.Domain", "PrevClientes.Domain\PrevClientes.Domain.csproj", "{E8CF6A1C-97BF-43DF-8838-CC30C8298089}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrevClientes.Domain.Core", "PrevClientes.Domain.Core\PrevClientes.Domain.Core.csproj", "{4DC69171-2C46-4A7F-91C6-2D4DD50FB8AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrevClientes.Domain.Core", "PrevClientes.Domain.Core\PrevClientes.Domain.Core.csproj", "{4DC69171-2C46-4A7F-91C6-2D4DD50FB8AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrevClientes.Domain.Service", "PrevClientes.Domain.Service\PrevClientes.Domain.Service.csproj", "{2E516921-05A0-40BD-87CC-40DA0C4C83A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrevClientes.Domain.Service", "PrevClientes.Domain.Service\PrevClientes.Domain.Service.csproj", "{2E516921-05A0-40BD-87CC-40DA0C4C83A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrevClientes.Infrastruture.Data", "PrevClientes.Infrastruture.Data\PrevClientes.Infrastruture.Data.csproj", "{11CB85F4-FED9-4497-B8C2-BE42061BE406}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrevClientes.Infrastruture.Data", "PrevClientes.Infrastruture.Data\PrevClientes.Infrastruture.Data.csproj", "{11CB85F4-FED9-4497-B8C2-BE42061BE406}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrevClientes.Infrastruture.Repository", "PrevClientes.Infrastruture.Repository\PrevClientes.Infrastruture.Repository.csproj", "{EDEF7A1C-9C37-4821-99F8-7D59CCBB9D02}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrevClientes.Infrastruture.CrossCutting.Adapter", "PrevClientes.Infrastruture.CrossCutting.Adapter\PrevClientes.Infrastruture.CrossCutting.Adapter.csproj", "{9AF0B696-1FDA-44EF-AF20-DE9863CB1745}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrevClientes.INfrastruture.CrossCutting.IOC", "PrevClientes.INfrastruture.CrossCutting.IOC\PrevClientes.INfrastruture.CrossCutting.IOC.csproj", "{60BAFAC1-3967-4F6E-BB52-CB82871777B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrevClientes.Infrastruture.Repository", "PrevClientes.Infrastruture.Repository\PrevClientes.Infrastruture.Repository.csproj", "{EDEF7A1C-9C37-4821-99F8-7D59CCBB9D02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,14 +67,6 @@ Global
 		{EDEF7A1C-9C37-4821-99F8-7D59CCBB9D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDEF7A1C-9C37-4821-99F8-7D59CCBB9D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDEF7A1C-9C37-4821-99F8-7D59CCBB9D02}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9AF0B696-1FDA-44EF-AF20-DE9863CB1745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9AF0B696-1FDA-44EF-AF20-DE9863CB1745}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9AF0B696-1FDA-44EF-AF20-DE9863CB1745}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9AF0B696-1FDA-44EF-AF20-DE9863CB1745}.Release|Any CPU.Build.0 = Release|Any CPU
-		{60BAFAC1-3967-4F6E-BB52-CB82871777B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60BAFAC1-3967-4F6E-BB52-CB82871777B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60BAFAC1-3967-4F6E-BB52-CB82871777B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60BAFAC1-3967-4F6E-BB52-CB82871777B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,7 +74,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1AD9411D-EC72-4599-8FAA-6F7406360AEB} = {191F7DEB-48E8-46EB-A66C-00BAA04824CB}
 		{5F052249-BD05-454B-A720-81650DF93E8E} = {4E8F75EF-D1BF-4378-9F85-40F310448C99}
-		{C6668CAC-2961-4F9E-9726-4A27CEE0E05B} = {4E8F75EF-D1BF-4378-9F85-40F310448C99}
 		{9D00C490-407B-4157-940A-9A3899DAA47A} = {EB9049CE-EC3D-4065-B1DA-9A040D1BC2ED}
 		{8241B4F8-7C30-4AA2-9935-13F8BBEC12C2} = {EB9049CE-EC3D-4065-B1DA-9A040D1BC2ED}
 		{E8CF6A1C-97BF-43DF-8838-CC30C8298089} = {1119595C-5C3B-4092-ABF7-D8F127A524D9}
@@ -96,8 +81,6 @@ Global
 		{2E516921-05A0-40BD-87CC-40DA0C4C83A2} = {1119595C-5C3B-4092-ABF7-D8F127A524D9}
 		{11CB85F4-FED9-4497-B8C2-BE42061BE406} = {5F052249-BD05-454B-A720-81650DF93E8E}
 		{EDEF7A1C-9C37-4821-99F8-7D59CCBB9D02} = {5F052249-BD05-454B-A720-81650DF93E8E}
-		{9AF0B696-1FDA-44EF-AF20-DE9863CB1745} = {C6668CAC-2961-4F9E-9726-4A27CEE0E05B}
-		{60BAFAC1-3967-4F6E-BB52-CB82871777B3} = {C6668CAC-2961-4F9E-9726-4A27CEE0E05B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7589318C-10BB-431C-BD39-7FA01EDFC635}

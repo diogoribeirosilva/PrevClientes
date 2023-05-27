@@ -19,8 +19,6 @@ namespace PrevClientes.Application.Features.Clientes.Handlers
 
         public async Task<List<ClienteDTO>> Handle(ObterTodosClientesQuery request, CancellationToken cancellationToken)
         {
-            // Implemente a lógica para obter todos os clientes do repositório
-            // e mapeá-los para a lista de ClienteDTO
 
             var clientes = await _clienteRepository.ObterTodosClientes();
 
@@ -28,7 +26,6 @@ namespace PrevClientes.Application.Features.Clientes.Handlers
 
             foreach (var cliente in clientes)
             {
-                // Mapeie os dados do cliente para o DTO correspondente
                 var clienteDTO = new ClienteDTO
                 {
                     Id = cliente.Id,

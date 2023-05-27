@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using PrevClientes.DependencyInjection;
@@ -23,8 +24,12 @@ builder.Services.AddSwaggerGen(c =>
 // Configuração do contexto do banco de dados
 builder.Services.AddDbContext<SqlContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+    .ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.MultipleCollectionIncludeWarning))
+    .ConfigureWarnings(warnings => warnings.Ignore(CoreEventId.DetachedLazyLoadingWarning));
+
 });
+builder.Services.AddMemoryCache();
 // Adicionar controllers à aplicação
 builder.Services.AddControllers();
 
