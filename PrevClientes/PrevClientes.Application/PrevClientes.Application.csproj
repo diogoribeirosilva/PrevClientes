@@ -6,4 +6,20 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="NovaPasta\**" />
+    <EmbeddedResource Remove="NovaPasta\**" />
+    <None Remove="NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PrevClientes.Application.DTO\PrevClientes.Application.DTO.csproj" />
+    <ProjectReference Include="..\PrevClientes.Domain.Core\PrevClientes.Domain.Core.csproj" />
+    <ProjectReference Include="..\PrevClientes.Domain\PrevClientes.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.0.1" />
+  </ItemGroup>
+
 </Project>

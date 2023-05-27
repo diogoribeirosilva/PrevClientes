@@ -1,9 +1,17 @@
-using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using PrevClientes.DependencyInjection;
+using PrevClientes.Infrastruture.Data;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Registro do serviço MediatR
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+
+// Configuração da injeção de dependência
+DependencyInjectionConfig.ConfigureDependencies(builder.Services);
 
 // Configuração do Swagger
 builder.Services.AddEndpointsApiExplorer();
@@ -12,6 +20,11 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "PrevClientes", Version = "v1" });
 });
 
+// Configuração do contexto do banco de dados
+builder.Services.AddDbContext<SqlContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 // Adicionar controllers à aplicação
 builder.Services.AddControllers();
 
