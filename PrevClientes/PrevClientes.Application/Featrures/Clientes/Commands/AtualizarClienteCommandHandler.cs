@@ -1,5 +1,7 @@
-﻿using MediatR;
+﻿using FluentValidation;
+using MediatR;
 using PrevClientes.Application.Featrures.Clientes.Commands;
+using PrevClientes.Application.Features.Clientes.Commands;
 using PrevClientes.Domain.Core.Interfaces.Repositories;
 
 namespace PrevClientes.Application.Features.Clientes.Commands
@@ -7,14 +9,25 @@ namespace PrevClientes.Application.Features.Clientes.Commands
     public class AtualizarClienteCommandHandler : IRequestHandler<AtualizarClienteCommand, bool>
     {
         private readonly IClienteRepository _clienteRepository;
+        private readonly IValidator<AtualizarClienteCommand> _validator;
 
-        public AtualizarClienteCommandHandler(IClienteRepository clienteRepository)
+        public AtualizarClienteCommandHandler(IClienteRepository clienteRepository, IValidator<AtualizarClienteCommand> validator)
         {
             _clienteRepository = clienteRepository;
+            _validator = validator;
         }
 
         public async Task<bool> Handle(AtualizarClienteCommand command, CancellationToken cancellationToken)
         {
+            // Validação do comando
+            var validationResult = await _validator.ValidateAsync(command);
+
+            if (!validationResult.IsValid)
+            {
+                // Retornar erros de validação
+                throw new ValidationException(validationResult.Errors);
+            }
+
             // Obter o cliente existente a partir do ID
             var clienteExistente = await _clienteRepository.ObterClientePorId(command.ClienteId);
 
