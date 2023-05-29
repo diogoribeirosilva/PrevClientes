@@ -1,7 +1,8 @@
-﻿using MediatR;
-using Microsoft.Extensions.DependencyInjection;
+﻿using FluentValidation;
+using MediatR;
 using PrevClientes.Application.DTO.DTO;
 using PrevClientes.Application.Featrures.Clientes.Commands;
+using PrevClientes.Application.Featrures.Clientes.Validator;
 using PrevClientes.Application.Features.Clientes.Commands;
 using PrevClientes.Application.Features.Clientes.Handlers;
 using PrevClientes.Application.Features.Clientes.Queries;
@@ -24,6 +25,10 @@ namespace PrevClientes.DependencyInjection
             services.AddScoped<IRequestHandler<RemoverClienteCommand, bool>, RemoverClienteCommandHandler>();
             services.AddScoped<IRequestHandler<ObterClientePorIdQuery, ClienteDTO>, ObterClientePorIdQueryHandler>();
             services.AddScoped<IRequestHandler<ObterTodosClientesQuery, List<ClienteDTO>>, ObterTodosClientesQueryHandler>();
+
+            // Validators
+            services.AddScoped<IValidator<AtualizarClienteCommand>, AtualizarClienteCommandValidator>();
+            services.AddScoped<IValidator<CriarClienteCommand>, CriarClienteCommandValidator>();
         }
     }
 }
