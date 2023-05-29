@@ -4,12 +4,12 @@ namespace PrevClientes.Domain.Models
 {
     public class Cliente
     {
-        public int Id { get; private set; }
-        public string Nome { get; private set; }
-        public string Cpf { get; private set; }
-        public string Email { get; private set; }
-        public int Idade { get; private set; }
-        public DateTime DataNascimento { get; private set; }
+        public int Id { get;  set; }
+        public string Nome { get;  set; }
+        public string Cpf { get;  set; }
+        public string Email { get;  set; }
+        public int Idade { get;  set; }
+        public DateTime DataNascimento { get;  set; }
 
         // Construtor
         public Cliente(string nome, string cpf, string email, int idade, DateTime dataNascimento)
